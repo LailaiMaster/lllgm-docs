@@ -170,7 +170,7 @@ JVM内部有两种线程：**守护线程和非守护线程，main()属于非守
 
 ## JVM类加载器
 
-### ![图片](https://uploader.shimo.im/f/dy8RDOQAaf8BFol6.png!thumbnail)
+### ![图片](/images/jvm2.png)
 
 ### 一、 JVM将整个类加载过程划分为了三个步骤：
 
@@ -352,7 +352,7 @@ PC寄存器是用于存储每个线程下一步将执行的JVM指令，如该方
 
 JVM栈是线程私有的，每个线程创建的同时都会创建JVM栈，JVM栈中存放的为当前线程中局部基本类型的变量（java中定义的八种基本类型：boolean、char、byte、short、int、long、float、double）、部分的返回结果以及Stack Frame，非基本类型的对象在JVM栈上仅存放一个指向堆上的地址。
 
-![图片](https://uploader.shimo.im/f/Tr6RbqbXNCkX4h2c.png!thumbnail)
+![图片](/images/jvm3.jpg)
 
 **第三块：堆（Heap）**
 
@@ -361,7 +361,7 @@ Heap是大家最为熟悉的区域，它是JVM用来存储对象实例以及数�
 ### 
 ### JVM将Heap分为New Generation和Old Generation（或Tenured Generation）两块来进行管理：
 
-![图片](https://uploader.shimo.im/f/WhOkH9b4lIoXXGYv.png!thumbnail)
+![图片](/images/jvm4.jpg)
 
 **新生代旧生代**
 
@@ -416,7 +416,7 @@ Heap是大家最为熟悉的区域，它是JVM用来存储对象实例以及数�
 
 类似C中的符号表，存放的为类中的固定的常量信息、方法和Field的引用信息等，其空间从方法区域中分配。
 
-![图片](https://uploader.shimo.im/f/KPtpjC0feQErZVyE.png!thumbnail)
+![图片](/images/jvm5.png)
 
  
 
@@ -424,7 +424,7 @@ Heap是大家最为熟悉的区域，它是JVM用来存储对象实例以及数�
 
 JVM采用本地方法堆栈来支持native方法的执行，此区域用于存储每个native方法调用的状态。
 
-![图片](https://uploader.shimo.im/f/GgH7XfOp9agHHgBX.png!thumbnail)
+![图片](/images/jvm6.png)
 
  
 
@@ -561,7 +561,7 @@ JVM采用本地方法堆栈来支持native方法的执行，此区域用于存�
 
 **卡片标记的算法为将旧生代以某个大小（例如512字节）进行划分，划分出来的每个区域称为卡片，JVM采用卡表维护卡的状态，每张卡片在卡表中占用一个字节的标识（有些JVM实现可能会不同），当Java代码执行过程中发现旧生代的对象引用或释放了对于新生代对象的引用时，就相应的修改卡表中卡的状态，每次Minor GC只需扫描卡表中标识为脏状态的卡中的对象即可，**图示如下：
 
- ![图片](https://uploader.shimo.im/f/omJn3mA6DdgdBsgW.png!thumbnail)
+ ![图片](/images/jvm7.jpg)
 
 1、跟踪收集器在扫描时最重要的是要根据这些对象是否被引用来标识其状态
 

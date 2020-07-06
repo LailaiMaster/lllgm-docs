@@ -14,7 +14,7 @@ Flutter 初始化：依据 WidgetTree 生成 ElementTree，并生成对应的 Re
 Flutter Update:（Widget Flutter 对视图的结构化描述， 是不可变的）
 
 
-![图片](images/flutter_init1.png)
+![图片](/images/flutter_init1.png)
 
 
 虽然只改变了一个节点，但是会销毁整个旧 WidgetTree，生成一棵新 WidgetTree，ElementTree 与 RenderObjecrTree 只替换变更的节点。
@@ -23,13 +23,13 @@ Flutter Update:（Widget Flutter 对视图的结构化描述， 是不可变的�
 
 Widget 有两种：一种是常见的 StatelessWidget StatefulWidget，他们只是组装 Widget 的容器，没有渲染能力。另外一类是 RenderObjectWidget（如 RichText RowImg），他们才是真正能控制渲染的 Widget。所以并不是每一个 Widget 都有对应的 RenderObject。 所以上边的 RenderObject 树与 Element 树并没有完全一致。
 
-![图片](images/flutter_init3.png)
+![图片](/images/flutter_init3.png)
 
 
 
 ## 2.2 从 runApp 开始
 
-![图片](images/flutter_init2.png)
+![图片](/images/flutter_init2.png)
 
 runApp()
 
