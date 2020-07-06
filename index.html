@@ -16,6 +16,7 @@
       name: '',
       repo: '',
       loadSidebar: true,
+      coverpage: true,
       auto2top: true,//切换页面后是否自动跳转到页面顶部
       //全文搜索
       search: {
@@ -26,12 +27,8 @@
         // 搜索标题的最大程级, 1 - 6
         depth: 3,
       },
-      // plugins: [
-      //   EditOnGithubPlugin.create('https://github.com/Snailclimb/JavaGuide-Interview/blob/master/')
-      // ],
-      plugins: [
-      EditOnGithubPlugin.create(docBase, docEditBase, title)
-    ]
+
+  
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
@@ -48,7 +45,7 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
-  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
 
 </body>
 </html>
