@@ -22,5 +22,9 @@
     * [数据结构](./docs/其他资源/c-2数据结构.md)
     * [算法](./docs/其他资源/c-3算法.md)
     * [操作系统](./docs/其他资源/c-4操作系统.md)
+  * Flutter
+    * 源码分析
+      * [深入Flutter的Rendering层，从runApp到三棵树的构建](./docs/其他资源/flutter/1.深入Flutter的Rendering层，从runApp到三棵树的构建.md)  
+      * [深入FLutter的Rendering层，布局layout与绘制paint](./docs/其他资源/flutter/2.深入FLutter的Rendering层，布局layout与绘制paint.md)
   
 
